@@ -7,13 +7,13 @@ export class ContactFormController {
   @Post()
   @Header('Content-Type', 'application/json')
   async addCustomerData(
-    @Body('name') customerName: string,
+    @Body('name') name: string,
     @Body('email') email: string,
     @Body('subject') subject: string,
     @Body('message') message: string,
   ) {
     const generatedId = await this.ContactFormService.insertCustomer(
-      customerName,
+      name,
       email,
       subject,
       message,
