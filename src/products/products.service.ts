@@ -5,8 +5,7 @@ import { Product } from './product.model';
 export class ProductsService {
   private products: Product[] = [];
   insertProduct(title: string, desc: string, price: number) {
-  {console.log('pror', title, desc, price)}
-  const prodId = Math.random().toString();
+    const prodId = Math.random().toString();
     const newProduct = new Product(prodId, title, desc, price);
     this.products.push(newProduct);
     return prodId;
@@ -18,9 +17,6 @@ export class ProductsService {
 
   getSingleProduct(productId: string) {
     const product = this.findProduct(productId)[0];
-  {console.log('pror', this.products)}
-  {console.log('prsor', product)}
-
     return { ...product };
   }
 
