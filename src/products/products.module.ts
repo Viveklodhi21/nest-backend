@@ -8,7 +8,6 @@ import { ContactFormModule } from '../contactForm/contactForm.module'
 
 @Module({
   imports: [
-    ContactFormModule,
     MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }]),
   ],
   controllers: [ProductController],
